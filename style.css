@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 15px);
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,143,214,1) 0%, rgba(87,172,203,1) 75%);
+}
+.nav-container{
+    display: flex;
+    grid-column: 3/6;
+    grid-row: 3/1;
+    text-align: center;
+    
+}
+.item-nav{
+    font-size: 1.75rem;
+    display: inline-block;
+    margin-top: 35px;
+    margin-right: 6vw;
+    transition: 0.2s;
+    
+}
+
+.item-nav:hover{
+    transition: 0.2s;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: 0.2;
+}
+a:hover{
+    color: #fff;
+    transition: 0.2;
+}
+.landing-section-container{
+    display: flex;
+    background-image: url(imagen_noruega.jpeg);
+    background-size: cover ;
+    background-position:bottom;
+    height: 700px;
+}
+.landing-text{
+    width: 50vw;
+    height: 50%;
+    margin-top: 250px;
+    
+    
+}
+.title-text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    color: #fff;
+    margin-left: 5vw;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    animation: show 3s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+}
+.landing-subtext{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: #fff;
+    padding-top: 5px;
+    margin-left: 5vw;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    animation: show 3s 2s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+}
+.button-container{
+    display: flex;
+    position: relative;
+    left: 800px;
+    bottom: 100px;
+    box-sizing: content-box;
+    width: fit-content;
+}
+.linked-button{
+    opacity: 0;
+    background: none;
+    border: 3px solid rgba(255, 255, 255, 0.74);
+    text-align: center;
+    border-radius: 8px;
+    padding: 25px 52px;
+    font-size: 2rem;
+    transition: 0.9s;
+    color: rgb(255, 255, 255);
+    animation: butt 1s 2s ease-in forwards, show 1s 3s ease-in forwards;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    
+}
+
+.linked-button:hover{
+    transition: 0.4s;
+    background: url(bandera_de_noruega.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border: 1xp solid red;
+    }
+    .linked-button:active{
+        transition: .2s;
+        box-shadow: 0 5px rgba(20, 20, 20, 0.514);
+      transform: translateY(4px);
+    }
+
+
+
+
+    @keyframes show {
+        to{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    
+        }
+    }
+    @keyframes move {
+        to{ 
+    
+            transform: translate(0);
+            
+        }
+    }  
+    @keyframes butt{
+        to{
+            display: flex;
+            opacity: 1;
+        }
+    }
+    .cards-section{
+        background-color: rgba(39, 160, 201, 0.329);
+        
+    }
+    .video-noruega{
+        width: 90vw;
+        margin-left: 5vw;
+        box-sizing: content-box;
+    }
+    .img-card{
+        display: inline-block;
+        border: 2px solid black;
+        box-sizing: content-box;
+        width: 25vw;
+        margin: 100px 150px;
+        background: linear-gradient(190deg, rgba(2,0,36,1) 0%, rgba(36,143,214,0.8897934173669468) 0%, rgba(87,172,203,0.5760679271708684) 54%);
+    }
+    .img-bandera{
+        padding: 10px;
+        width: 24vw;
+        height: 230px;
+        object-fit: cover;
+    }
+    .img-paisaje{
+        padding: 10px;
+        width: 24vw;
+        object-fit: cover;
+    }
+    .text-card-img{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .wikipedia-button{
+        background: #fff;
+    border: 3px solid rgba(255, 255, 255, 0.74);
+    text-align: center;
+    border-radius: 8px;
+    padding: 2px;
+    font-size: 1rem;
+    transition: 0.9s;
+    color: rgb(0, 0, 0);
+    margin: 5px 15px ;
+    }
+    .video-text{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.7rem;
+        text-align: center;
+        margin: 20px;
+        margin-bottom: 30px;
+    }
+    .clase-reciclaje{
+        margin-top: 0;
+        font-size: 2em;
+        padding-top: 10px;
+    }
+    @media only screen and (max-width: 480px){
+        .item-nav{
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 35px;
+            margin-right: 2.5px;
+            transition: 0.2s;
+            
+        }
+        .landing-section-container{
+            display: flex;
+            background-image: url(imagen_noruega.jpeg);
+            background-size: cover ;
+            background-position:bottom;
+            height: 75vh
+        }
+        .title-text{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            margin-left: 5vw;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            animation: show 3s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+            z-index: 1;
+            
+        }
+        .landing-subtext{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            color: #fff;
+            padding-top: 5px;
+            margin-left: 50vw;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            animation: show 3s 2s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+        }
+        .button-container{
+            display: flex;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            margin-left: 5vw;
+            box-sizing: content-box;
+            width: fit-content;
+        }
+        .linked-button{
+            opacity: 0;
+            background: none;
+            border: 3px solid rgba(255, 255, 255, 0.74);
+            text-align: center;
+            border-radius: 8px;
+            padding: 5px 2px;
+            font-size: 1rem;
+            transition: 0.9s;
+            color: rgb(255, 255, 255);
+            animation: butt 1s 2s ease-in forwards, show 1s 3s ease-in forwards;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            
+        }
+        header{
+            display: flex;
+            
+        }
+        .item-nav{
+            display: inline-block;
+            position: relative;
+            left: 30px;
+            margin-left: 5vh;
+        }
+        html{
+            width: fit-content;
+        }
+        .img-card{
+            display: inline-block;
+            border: 2px solid black;
+            box-sizing: content-box;
+            width: 100vw;
+            margin: auto;
+            margin-bottom: 25px;
+            background: linear-gradient(190deg, rgba(2,0,36,1) 0%, rgba(36,143,214,0.8897934173669468) 0%, rgba(87,172,203,0.5760679271708684) 54%);
+        }
+        .video-noruega{
+            width: 100vw;
+            margin: 10px;
+            padding-right: 5px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .video-container{
+            width: fit-content;
+            margin: 0;
+        }
+        .text-card-img{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            margin-top: 10px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        .video-text{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+        .clase-reciclaje{
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .img-bandera{
+            width: 100vw;
+            object-fit: cover;
+        }
+        .img-paisaje{
+            width: 100vw;
+            object-fit: cover;
+            font-size: 2rem;
+        }
+    }
+    @media only screen and (max-height: 480px){
+        .item-nav{
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 35px;
+            margin-right: 2.5px;
+            transition: 0.2s;
+            
+        }
+        .landing-section-container{
+            display: flex;
+            background-image: url(imagen_noruega.jpeg);
+            background-size: cover ;
+            background-position:bottom;
+            height: 75vh
+        }
+        .title-text{
+            display: flex;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            margin-left: 5vw;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            animation: show 3s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+            z-index: 1;
+            
+        }
+        .landing-subtext{
+            display: flex;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            color: #fff;
+            padding-top: 5px;
+            margin-left: 50vw;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            animation: show 3s 2s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+        }
+        .button-container{
+            display: flex;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            margin-left: 5vw;
+            box-sizing: content-box;
+            width: fit-content;
+        }
+        .linked-button{
+            opacity: 0;
+            background: none;
+            border: 3px solid rgba(255, 255, 255, 0.74);
+            text-align: center;
+            border-radius: 8px;
+            padding: 5px 2px;
+            font-size: 1rem;
+            transition: 0.9s;
+            color: rgb(255, 255, 255);
+            animation: butt 1s 2s ease-in forwards, show 1s 3s ease-in forwards;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            
+        }
+        header{
+            display: flex;
+            
+        }
+        .item-nav{
+            display: inline-block;
+            position: relative;
+            left: 30px;
+            margin-left: 5vh;
+        }
+        html{
+            width: fit-content;
+        }
+        .img-card{
+            display: inline-block;
+            border: 2px solid black;
+            box-sizing: content-box;
+            width: 100vw;
+            margin: auto;
+            margin-bottom: 25px;
+            background: linear-gradient(190deg, rgba(2,0,36,1) 0%, rgba(36,143,214,0.8897934173669468) 0%, rgba(87,172,203,0.5760679271708684) 54%);
+        }
+        .video-noruega{
+            width: 100vw;
+            margin: 10px;
+            padding-right: 5px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .video-container{
+            width: fit-content;
+            margin: 0;
+        }
+        .text-card-img{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            margin-top: 10px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        .video-text{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+        .clase-reciclaje{
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .img-bandera{
+            width: 100vw;
+            object-fit: cover;
+        }
+        .img-paisaje{
+            width: 100vw;
+            object-fit: cover;
+            font-size: 2rem;
+        }
+    }
+    @media only screen and (max-width: 800px){
+        .item-nav{
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 35px;
+            margin-right: 2.5px;
+            transition: 0.2s;
+            
+        }
+        .landing-section-container{
+            display: flex;
+            background-image: url(imagen_noruega.jpeg);
+            background-size: cover ;
+            background-position:bottom;
+            height: 75vh
+        }
+        .title-text{
+            display: flex;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            margin-left: 5vw;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            animation: show 3s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+            z-index: 1;
+            
+        }
+        .landing-subtext{
+            display: flex;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            color: #fff;
+            padding-top: 5px;
+            margin-left: 50vw;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            animation: show 3s 2s cubic-bezier(.84,-0.17,.83,.67) forwards,  move 1s 1s forwards ;
+        }
+        .button-container{
+            display: flex;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            margin-left: 5vw;
+            box-sizing: content-box;
+            width: fit-content;
+        }
+        .linked-button{
+            opacity: 0;
+            background: none;
+            border: 3px solid rgba(255, 255, 255, 0.74);
+            text-align: center;
+            border-radius: 8px;
+            padding: 5px 2px;
+            font-size: 1rem;
+            transition: 0.9s;
+            color: rgb(255, 255, 255);
+            animation: butt 1s 2s ease-in forwards, show 1s 3s ease-in forwards;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            
+        }
+        header{
+            display: flex;
+            
+        }
+        .item-nav{
+            display: inline-block;
+            position: relative;
+            left: 30px;
+            margin-left: 5vh;
+        }
+        html{
+            width: fit-content;
+        }
+        .img-card{
+            display: inline-block;
+            border: 2px solid black;
+            box-sizing: content-box;
+            width: 100vw;
+            margin: auto;
+            margin-bottom: 25px;
+            background: linear-gradient(190deg, rgba(2,0,36,1) 0%, rgba(36,143,214,0.8897934173669468) 0%, rgba(87,172,203,0.5760679271708684) 54%);
+        }
+        .video-noruega{
+            width: 100vw;
+            margin: 10px;
+            padding-right: 5px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .video-container{
+            width: fit-content;
+            margin: 0;
+        }
+        .text-card-img{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            margin-top: 10px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        .video-text{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+        .clase-reciclaje{
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .img-bandera{
+            width: 100vw;
+            object-fit: cover;
+        }
+        .img-paisaje{
+            width: 100vw;
+            object-fit: cover;
+            font-size: 2rem;
+        }
+    }
